@@ -29,7 +29,7 @@ export default function App() {
   if (error) {
     return <p>An error occurred: {error.message}</p>;
   }
-
+  console.log(data.title);
   return (
     <ProductCard data={data} />
   );

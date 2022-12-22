@@ -5,10 +5,10 @@ export default function ProductCard ({data}) {
 
   function dataShow(product) {
     return (
-      <div class="card">
-        <img src="" alt="" style="width:100%"/>
+      <div key={product.id} className="card">
+        <img src="" alt=""/>
         <h1>{product.title}</h1>
-        <p class="price">{product.price}</p>
+        <p className="price">{product.price}</p>
         <p>{product.description}</p>
         <p><button>Add to Cart</button></p>
       </div>
@@ -19,7 +19,6 @@ export default function ProductCard ({data}) {
     <>
       {data.map(dataShow)}
     </>
-    
   )
 }
 

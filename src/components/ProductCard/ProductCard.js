@@ -5,12 +5,17 @@ export default function ProductCard ({data}) {
 
   function dataShow(product) {
     return (
-      <div key={product.id} className="card">
-        <img src="" alt=""/>
-        <h1>{product.title}</h1>
-        <p className="price">{product.price}</p>
-        <p>{product.description}</p>
-        <p><button>Add to Cart</button></p>
+      <div key={product.id} className='card'>
+        <img src="" alt="" />
+        <div className="card-info">
+          <h3 className='card-header'>{product.title}</h3>
+          <div className="card-over">
+          <h2>Description</h2>
+          <p>{product.description}</p>
+        </div>
+        </div>
+        <div className="card-price">{product.price} TL</div>
+        <p className='buttonAdd'><button>Add To Card</button></p>
       </div>
     )
   }

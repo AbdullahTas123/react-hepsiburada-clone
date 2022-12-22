@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import ProductCard from "../components/ProductCard/ProductCard";
+import ProductListArea from "../components/ProductListArea/ProductListArea";
+import Header from "../components/Header/Header";
 
 export default function App() {
   const [data, setData] = useState(null);
@@ -29,8 +30,11 @@ export default function App() {
   if (error) {
     return <p>An error occurred: {error.message}</p>;
   }
-  console.log(data.title);
+
   return (
-    <ProductCard data={data} />
+    <>
+      <Header />
+      <ProductListArea data={data} />
+    </>  
   );
 }

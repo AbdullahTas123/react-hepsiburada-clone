@@ -12,6 +12,12 @@ export default function Header () {
           <button type="submit">Go</button>
         </form>
       </div>
+      <div className="header-colorful">
+        <div className="header-bot1"></div>
+        <div className="header-bot2"></div>
+        <div className="header-bot3"></div>
+        <div className="header-bot4"></div>
+      </div>
     </div>
   )
 }

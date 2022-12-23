@@ -1,80 +1,130 @@
-.card {
-  background-color: #d3d4df;
-  border-radius: 3px;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  position: relative;
-  width: 300px;
-  height: 400px;
-  margin: 1rem;
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
 }
-
-.card:hover {
-  cursor: pointer;
-  border: #373b69 1px solid;
-}
-
-.card img {
-  max-width: 100%;
-}
-
-.card-info {
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-}
-
-.card-info h3 {
+/*
+  2. Remove default margin
+*/
+* {
   margin: 0;
 }
-
-.card-header {
-  text-align: center;
-  width: 100%;
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
 }
 
-.card-price {
-  text-align: center;
-  font-weight: 700;
-}
+.product__img {
 
-.card-over {
-  background-color: #fff;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  /* box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1); */
-  color: #373b69;
-  padding: 1rem;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  overflow: auto;
-  max-height: 100%;
-  transform: translateY(100%);
-  transition: transform 0.3s ease-in-out;
-  z-index: 2;
-}
+  object-fit: cover;
+} 
 
-.card-info:hover .card-over {
-  transform: translateY(0%);
-}
 
-.buttonAdd {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  z-index: 1;
-}
+.product {
+  --content-padding: 1rem;
+  --content-spacing: 0.5rem;
+  --button-color:rgb(227, 86, 0);
 
-.buttonAdd button {
-  width: 100%;
-  height: 50px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: hsl(228, 12%, 48%);
+  background-color: hsl(0, 0%, 100%);
+  border: 1px rgb(182, 180, 180) solid;
+  border-radius: 0.2rem;
+  overflow: hidden;
+  width: 250px;
+  height: 450px;
   cursor: pointer;
-  background-color: #4CAF50; /* Green */
-  border: none;
 }
 
-.buttonAdd button:hover {
-  background-color: #3e8e41;
+.product:hover {
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.product__content {
+  display: grid;
+  gap: var(--content-spacing);
+  /* border: 2px red solid; */
+  padding: var(--content-padding);
+}
+
+.product__offer {
+  border-radius: 0.3rem;
+  text-align: center;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  background-color: var(--button-color);
+  color: white;
+}
+
+.product__title {
+  overflow: hidden;
+  height: 2.7rem;
+  font-weight: 700;
+  color: black;
+}
+
+
+.product__description {
+  overflow: hidden;
+  height: 2.5rem;
+}
+
+.product__price {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: black;
+}
+
+
+.button {
+  border: none;
+  visibility: hidden;
+  background-color: var(--button-color);
+  color: white;
+  padding: 0.3em 1.5em;
+  border-radius: 0.3rem;
+  text-decoration: none;
+}
+
+.product:hover .button {
+  visibility: visible;
+  cursor: pointer;
+}
+
+.product:hover .button:hover {
+  background-color: rgb(187, 86, 0);
 }

@@ -5,17 +5,18 @@ export default function ProductCard ({data}) {
 
   function dataShow(product) {
     return (
-      <div key={product.id} className='card'>
-        <img src="" alt="" />
-        <div className="card-info">
-          <h3 className='card-header'>{product.title}</h3>
-          <div className="card-over">
-          <h2>Description</h2>
-          <p>{product.description}</p>
+      <div key={product.id} className='product'>
+        <picture className='product__img'>
+          <img src="https://unsplash.it/250/200" alt="unsplash" />
+        </picture>
+        <div className="product__content">
+          <p className="product__offer">Hemen Al Sonra Öde</p>
+          <h3 className='product__title'>{product.title}</h3>
+          <p className='product__description'>{product.description}</p>
+          <p>&#11088; &#11088; &#11088; &#11088; &#11088;</p>
+          <div className="product__price">{product.price} TL</div>
+          <button className='button'>Add To Card</button>
         </div>
-        </div>
-        <div className="card-price">{product.price} TL</div>
-        <p className='buttonAdd'><button>Add To Card</button></p>
       </div>
     )
   }

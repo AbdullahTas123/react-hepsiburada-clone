@@ -1,6 +1,6 @@
 .header {
-  background-color: #333;
-  color: #fff;
+  background-color: #fff;
+  color: rgb(227, 86, 0);
   padding: 20px;
 }
 
@@ -29,6 +29,7 @@ input[type="text"] {
   border-radius: 5px 0 0 5px;
   font-size: 1em;
   flex-grow: 1;
+  border:#333 solid 1px;
 }
 
 button[type="submit"] {
@@ -44,5 +45,32 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #fff;
   color: #333;
-  border-left: #333 1px solid;
+  border: #333 1px solid;
+}
+
+.header-colorful {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  height: 8px;
+}
+
+.header-bot1 {
+  width: 25%;
+  background-color: #7622da;
+}
+
+.header-bot2 {
+  width: 25%;
+  background-color: #47c6eb;
+}
+
+.header-bot3 {
+  width: 25%;
+  background-color: #ed5f1f;
+}
+
+.header-bot4 {
+  width: 25%;
+  background-color: #f59f28;
 }

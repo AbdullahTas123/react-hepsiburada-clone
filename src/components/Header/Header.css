@@ -1,10 +1,44 @@
-.header {
-  background-color: #fff;
-  color: rgb(227, 86, 0);
-  padding: 20px;
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
 }
 
-.header-container {
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* Top Header */
+.top-header {
+  background-color: #fff;
+  color: rgb(227, 86, 0);
+  padding: 20px 0 0 0;
+}
+
+.top-header__container {
   max-width: 960px;
   margin: 0 auto;
   display: flex;
@@ -12,16 +46,15 @@
   align-items: center;
 }
 
-h1 {
+.top-header__logo {
   font-size: 2em;
-  margin: 0;
 }
 
-form {
+.top-header__search-container form {
   display: flex;
 }
 
-input[type="text"] {
+.top-header__search-container input[type="text"] {
   border: none;
   background-color: #fff;
   color: #333;
@@ -32,7 +65,7 @@ input[type="text"] {
   border:#333 solid 1px;
 }
 
-button[type="submit"] {
+.top-header__search-container button[type="submit"] {
   border: 1px white solid;
   background-color: #333;
   color: #fff;
@@ -42,35 +75,101 @@ button[type="submit"] {
   cursor: pointer;
 }
 
-button[type="submit"]:hover {
+.top-header__search-container button[type="submit"]:hover {
   background-color: #fff;
   color: #333;
   border: #333 1px solid;
 }
 
-.header-colorful {
+.top-header__login-cart {
+  display: flex;
+  gap: 20px;
+}
+
+.top-header__login a {
+  border: #333 solid 1px;
+  background-color: #333;
+  color: white;
+  padding: 0 10px 0 10px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  text-decoration: none;
+}
+
+.top-header__login a:hover {
+  background-color: white;
+  color: #333;
+}
+
+
+.top-header__cart a {
+  border: #333 solid 1px;
+  background-color: #333;
+  color: white;
+  padding: 0 10px 0 10px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  text-decoration: none;
+}
+
+.top-header__cart a:hover {
+  background-color: white;
+  color: #333;
+}
+
+/* Top Header Colorful Area */
+.top-header__colorful {
   width: 100%;
   margin-top: 30px;
   display: flex;
   height: 8px;
 }
 
-.header-bot1 {
+.top-header__colorful .color1 {
   width: 25%;
   background-color: #7622da;
 }
 
-.header-bot2 {
+.top-header__colorful .color2 {
   width: 25%;
   background-color: #47c6eb;
 }
 
-.header-bot3 {
+.top-header__colorful .color3 {
   width: 25%;
   background-color: #ed5f1f;
 }
 
-.header-bot4 {
+.top-header__colorful .color4 {
   width: 25%;
   background-color: #f59f28;
 }
+
+/* Bottom Header */
+.bot-header {
+  background-color: #eeeeee;
+  color: black;
+}
+
+.bot-header__menu {
+  display: flex;
+}
+
+.bot-header__menu a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  height: 56px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.bot-header__menu a:hover {
+  color: #ccc;
+}
+

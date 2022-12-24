@@ -10,21 +10,7 @@
 * {
   margin: 0;
 }
-/*
-  3. Allow percentage-based heights in the application
-*/
-html, body {
-  height: 100%;
-}
-/*
-  Typographic tweaks!
-  4. Add accessible line-height
-  5. Improve text rendering
-*/
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
+
 /*
   6. Improve media defaults
 */
@@ -46,10 +32,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .product__img {
-
   object-fit: cover;
 } 
-
 
 .product {
   --content-padding: 1rem;
@@ -97,7 +81,6 @@ p, h1, h2, h3, h4, h5, h6 {
   color: black;
 }
 
-
 .product__description {
   overflow: hidden;
   height: 2.5rem;
@@ -109,7 +92,6 @@ p, h1, h2, h3, h4, h5, h6 {
   color: black;
 }
 
-
 .button {
   border: none;
   visibility: hidden;
@@ -118,6 +100,9 @@ p, h1, h2, h3, h4, h5, h6 {
   padding: 0.3em 1.5em;
   border-radius: 0.3rem;
   text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .product:hover .button {

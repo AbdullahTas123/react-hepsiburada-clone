@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
-import ProductListArea from "../components/ProductListArea/ProductListArea";
+// import ProductListArea from "../components/ProductListArea/ProductListArea";
 import Header from "../components/Header/Header";
+import ProductListAndFilterArea from "../components/ProductListAndFilterArea/ProductListAndFilterArea";
 
 export default function App() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [filterText, setFilterText] = useState("");
+  const [productCount, setproductCount] = useState(0);
 
   useEffect(() => {
     async function fetchData() {
@@ -31,10 +34,20 @@ export default function App() {
     return <p>An error occurred: {error.message}</p>;
   }
 
+
   return (
-    <>
-      <Header />
-      <ProductListArea data={data} />
-    </>  
+    <div className="wrapper">
+      <Header 
+        filterText={filterText}
+        setFilterText={setFilterText}
+      />
+
+      <ProductListAndFilterArea
+        products={data}
+        filterText={filterText}
+        productCount={productCount}
+        setproductCount={setproductCount}
+      />
+    </div>  
   );
 }

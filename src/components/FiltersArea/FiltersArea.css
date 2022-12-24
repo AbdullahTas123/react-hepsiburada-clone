@@ -1,0 +1,60 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6, label {
+  overflow-wrap: break-word;
+}
+
+
+.product-list-regulators {
+  border: 1px solid black;
+  width: 200px;
+  margin-right: 20px;
+}
+
+.total-product-count {
+  padding: 16px;
+  font-size: 12px;
+  color: black;
+}
+
+.brand-filter {
+  color: #333333;
+}
+
+.brand-filter label {
+  text-align: center;
+}
+
+.brand-filter form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.brand-filter input[type="text"] {
+  background-color: #fff;
+  color: #333;
+  margin: 10px;
+  border-radius: 3px;
+  font-size: 1em;
+  border:#333 solid 1px;
+}
+
+.brand-filter select {
+  margin: 0 10px 0 10px;
+}

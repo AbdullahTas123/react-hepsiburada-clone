@@ -19,23 +19,9 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
-.product-list-area {
-  border: 1px blue solid;
+.product-list-area-wrapper {
   display: flex;
-  flex-wrap: wrap;
+  width: 90%;
+  margin: 20px auto 0 auto;
   justify-content: center;
-  gap: 2rem;
-  width: 100%;
-}
-
-@media only screen and (max-width:1439px) {
-  .product-list-area {
-    max-width: 916px;
-  }
-}
-
-@media only screen and (max-width:1199px) {
-  .product-list-area {
-    max-width: 736px;
-  }
 }

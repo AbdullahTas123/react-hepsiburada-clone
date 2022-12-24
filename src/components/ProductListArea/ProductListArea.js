@@ -3,10 +3,17 @@ import ProductCard from "../ProductCard/ProductCard";
 import "./ProductListArea.css"
 
 
-export default function ProductListArea ({ data }) {
+export default function ProductListArea ({ products, productCount, setproductCount }) {
+  function dataShow(product) {
+
+    return (
+      <ProductCard product={product} />
+    )
+  }
+
   return (
-    <div className='container'>
-      <ProductCard data={data} />
+    <div className='product-list-area'>
+      {products.map(dataShow)}
     </div>
   )
 }

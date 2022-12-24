@@ -59,7 +59,7 @@ function BotHeader () {
 
 export default function Header () {
   return (
-    <div>
+    <div className="header">
       <TopHeader />
       <BotHeader />
     </div>

@@ -7,11 +7,11 @@ export default function ImageSlider({ slides }) {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
 
-  const nextSlide = () => {
+  const goToNext = () => {
     setCurrent(current == length - 1 ? 0 : current + 1);
   }
 
-  const prevSlide = () => {
+  const goToPrev = () => {
     setCurrent(current == 0 ? length - 1 : current - 1);
   }
 
@@ -21,8 +21,8 @@ export default function ImageSlider({ slides }) {
 
   return (
     <section className='slider'>
-      <FaArrowAltCircleLeft className='left-arrow' onClick={prevSlide} />
-      <FaArrowAltCircleRight className='right-arrow' onClick={nextSlide} />
+      <FaArrowAltCircleLeft className='left-arrow' onClick={goToPrev} />
+      <FaArrowAltCircleRight className='right-arrow' onClick={goToNext} />
       {SliderData.map((slide, index) => {
         return (
           <div

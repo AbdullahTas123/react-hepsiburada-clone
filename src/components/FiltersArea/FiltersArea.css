@@ -21,7 +21,7 @@ p, h1, h2, h3, h4, h5, h6, label {
 
 
 .product-list-regulators {
-  border: 1px solid black;
+  border: 1px solid rgb(176, 190, 197);
   width: 200px;
   margin-right: 20px;
 }

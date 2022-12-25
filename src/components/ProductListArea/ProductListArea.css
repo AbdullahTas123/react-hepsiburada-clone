@@ -20,7 +20,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .product-list-area {
-  border: 1px blue solid;
+  /* border: 1px blue solid; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

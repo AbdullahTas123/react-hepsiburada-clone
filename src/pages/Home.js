@@ -4,6 +4,7 @@ import Header from "../components/Header/Header";
 import ProductListAndFilterArea from "../components/ProductListAndFilterArea/ProductListAndFilterArea";
 import ImageSlider from "../components/ImageSlider/ImageSlider";
 import {SliderData} from "../constants/sliderData";
+import ProductTitleArea from "../components/ProductTitleArea/ProductTitleArea";
 
 export default function App() {
   const [data, setData] = useState(null);
@@ -45,6 +46,8 @@ export default function App() {
       />
 
       <ImageSlider slides={SliderData}/>
+
+      <ProductTitleArea />
 
       <ProductListAndFilterArea
         products={data}

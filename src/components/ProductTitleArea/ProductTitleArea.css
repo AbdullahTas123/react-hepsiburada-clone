@@ -1,0 +1,50 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+.product-title-area {
+  /* border: 1px solid black; */
+  border-top: 1px solid rgb(176, 190, 197);
+  border-bottom: 1px solid rgb(176, 190, 197);
+
+  width:90%;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 50px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  padding: 10px 0px 10px 0px;
+}
+
+.product-title-area h1 {
+  color:#484848;
+}
+
+.category-section {
+  display: flex;
+}
+
+.category-section p{
+  color: #919191;
+}

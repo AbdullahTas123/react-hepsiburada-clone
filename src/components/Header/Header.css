@@ -142,11 +142,13 @@ p, h1, h2, h3, h4, h5, h6 {
 .bot-header {
   background-color: #eeeeee;
   color: black;
-  padding: 0 20px 0 20px;
+  /* padding: 0 20px 0 20px; */
 }
 
 .bot-header-menu {
   display: flex;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .bot-header-menu a {

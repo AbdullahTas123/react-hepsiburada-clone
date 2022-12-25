@@ -81,6 +81,7 @@ p, h1, h2, h3, h4, h5, h6 {
   visibility: hidden;
   background-color: var(--button-color);
   color: white;
+  margin-top: 10px;
   padding: 0.3em 1.5em;
   border-radius: 0.3rem;
   text-decoration: none;

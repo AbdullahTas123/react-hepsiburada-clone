@@ -6,8 +6,6 @@ import ProductListArea from "../ProductListArea/ProductListArea";
 
 export default function ProductListAndFilterArea ({products, filterText, productCount, setproductCount}) {
 
-  setproductCount(products.length)
-  
   return (
     <div className="product-list-area-wrapper">
       <FiltersArea productCount={productCount} />

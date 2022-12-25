@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 // import ProductListArea from "../components/ProductListArea/ProductListArea";
 import Header from "../components/Header/Header";
 import ProductListAndFilterArea from "../components/ProductListAndFilterArea/ProductListAndFilterArea";
+import ImageSlider from "../components/ImageSlider/ImageSlider";
+import {SliderData} from "../constants/sliderData";
 
 export default function App() {
   const [data, setData] = useState(null);
@@ -41,6 +43,8 @@ export default function App() {
         filterText={filterText}
         setFilterText={setFilterText}
       />
+
+      <ImageSlider slides={SliderData}/>
 
       <ProductListAndFilterArea
         products={data}

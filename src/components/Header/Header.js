@@ -3,17 +3,26 @@ import "./Header.css"
 
 // Logo, arama, giriş ve sepet kısmının bulunduğu alan
 function TopHeader ({filterText, setFilterText}) {
+  
+  const handleOnSubmit = e => {
+    e.preventDefault();
+  }
+
+  const handleOnChange = e => {
+    setFilterText(e.target.value);
+  }
+  
   return (
     <div className="top-header">
         <div className="top-header-container">
           <h1 className="top-header-logo">Hepsi Şurada</h1>
           <div className="top-header-search-container">
-            <form>
+            <form onSubmit={handleOnSubmit}>
               <input 
                 type="text" 
                 placeholder="Arama yap..."
                 value={filterText}
-                onChange={(e) => {setFilterText(e.target.value)}} />
+                onChange={handleOnChange} />
               <button type="submit">Ara</button>
             </form>
           </div>

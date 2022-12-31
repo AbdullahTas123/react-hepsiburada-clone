@@ -1,8 +1,31 @@
 import React from 'react';
-import "./ProductCard.css"
+import "./ProductCard.css";
+import { BsStar, BsStarHalf, BsStarFill } from "react-icons/bs";
 
 
 export default function ProductCard ({product}) {
+  let rating = product.rating.rate;
+
+  const result = []
+  for (let i = 0; i < 5; i++) {
+    if (rating >= 1){
+      result.push(<BsStarFill key={i} className="product-star fill" />);
+      rating -= 1
+    }
+    else if (rating > 0) {
+      if (rating >= 0.5){
+        result.push(<BsStarHalf key={i} className="product-star half"/>);
+      }
+      else {
+        result.push(<BsStar key={i} className="product-star empty"/>);
+      }
+      rating -= rating
+    }
+    else {
+      result.push(<BsStar key={i} className="product-star empty"/>);
+    }
+  }
+
   return (
     <div className='product' title={product.title}>
       <picture className='product-img'>
@@ -11,8 +34,12 @@ export default function ProductCard ({product}) {
       <div className="product-content">
         <p className="product-offer">Hemen Al Sonra Öde</p>
         <h3 className='product-title' >{product.title}</h3>
-        <p className='product-description' title={product.description}>{product.description}</p>
-        <p>&#11088; &#11088; &#11088; &#11088; &#11088;</p>
+        {/* <p className='product-description' title={product.description}>{product.description}</p> */}
+        <div className='product-rating-area'>
+          <p>{result}</p>
+          <p className='product-rating'>{product.rating.rate}</p>
+        </div>
+
         <div className="product-price">{product.price} TL</div>
         <button className='button'>Add To Card</button>
       </div>
@@ -21,3 +48,26 @@ export default function ProductCard ({product}) {
 }
 
 
+
+// const result = []
+//   for (let i = 0; i < 5; i++) {
+//     if (rating >= 1){
+//       result.push(<BsStarFill key={i} className="product-star fill" />);
+//       rating -= 1
+//     }
+//     else if (rating > 0) {
+//       if (rating + 0.25 >= 1){
+//         result.push(<BsStarFill key={i} className="product-star fill"/>);
+//       }
+//       else if (rating + 0.25 >= 0.50) {
+//         result.push(<BsStarHalf key={i} className="product-star half"/>);
+//       }
+//       else {
+//         result.push(<BsStar key={i} className="product-star empty"/>);
+//       }
+//       rating -= rating
+//     }
+//     else {
+//       result.push(<BsStar key={i} className="product-star empty"/>);
+//     }
+//   }

@@ -1,5 +1,6 @@
 import React from "react";
-import "./Header.css"
+import "./Header.css";
+import { FaShoppingCart } from "react-icons/fa";
 
 // Logo, arama, giriş ve sepet kısmının bulunduğu alan
 function TopHeader ({filterText, setFilterText}) {
@@ -30,8 +31,8 @@ function TopHeader ({filterText, setFilterText}) {
             <div className="top-header-login">
               <a href="#">Giriş Yap</a>
             </div>
-            <div className="top-header-cart">
-              <a href="#">Sepetim</a>
+            <div className="top-header-cart"> 
+              <a href="#"><FaShoppingCart /></a>
             </div>
           </div>
         </div>
@@ -50,7 +51,7 @@ function BotHeader () {
   return (
     <div className="bot-header">
       <div className="bot-header-menu">
-        <a href="#Elektronik">Elektronik</a>
+        <a href="#Elektronik" >Elektronik</a>
         <a href="#Moda">Moda</a>
         <a href="#Ev">Ev, Yaşam, Kırtasiye, Ofis</a>
         <a href="#Oto">Oto, Bahçe</a>

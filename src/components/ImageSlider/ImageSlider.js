@@ -6,7 +6,6 @@ import SliderImages from "../../constants/slider-images";
 
 export default function ImageSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  // const path = `../../assets/images/slider-images/${slides[currentImage]}`;
   const length = SliderImages.length;
 
   // automatically slide
@@ -42,7 +41,7 @@ export default function ImageSlider() {
 
         <img className='slider-image' src={SliderImages[currentIndex]} alt="product images" />
 
-        <div className='right-arrow-area'>
+        <div className='right-arrow-area' >
           <FaArrowAltCircleRight className='right-arrow' onClick={nextImage} />
         </div>
         

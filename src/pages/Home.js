@@ -3,15 +3,16 @@ import React, { useState, useEffect } from "react";
 import Header from "../components/Header/Header";
 import ProductListAndFilterArea from "../components/ProductListAndFilterArea/ProductListAndFilterArea";
 import ImageSlider from "../components/ImageSlider/ImageSlider";
-import {SliderData} from "../constants/sliderData";
 import ProductTitleArea from "../components/ProductTitleArea/ProductTitleArea";
+
 
 export default function App() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [filterText, setFilterText] = useState("");
-  const [productCount, setproductCount] = useState(0);
+
+  // const {data, loading, error} = useQuery();
 
   useEffect(() => {
     async function fetchData() {
@@ -45,15 +46,13 @@ export default function App() {
         setFilterText={setFilterText}
       />
 
-      <ImageSlider slides={SliderData}/>
+      <ImageSlider/>
 
       <ProductTitleArea />
 
       <ProductListAndFilterArea
         products={data}
         filterText={filterText}
-        productCount={productCount}
-        setproductCount={setproductCount}
       />
     </div>  
   );

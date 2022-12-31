@@ -11,7 +11,7 @@ export default function FiltersArea ({productCount}) {
 
       <div className="brand-filter">
         <form>
-          <label for="brand-filter">Marka</label>
+          <label htmlFor="brand-filter">Marka</label>
           <input type="text" placeholder="Marka ara..." />
           <select id="brand-filter">
             <option value="all">Tüm Markalar</option>

@@ -3,25 +3,15 @@ import ProductCard from "../ProductCard/ProductCard";
 import "./ProductListArea.css"
 
 
-export default function ProductListArea ({ products, productCount, setproductCount, filterText }) {
-
-  const rows = []
-  
-  products.forEach(product => {
-    if (product.title.toLowerCase().indexOf(filterText.toLowerCase()) == -1){
-      return
-    }
-
-    rows.push(
-      <ProductCard product={product} />
-    )
-  });
-
-  setproductCount(rows.length)
-
+export default function ProductListArea ({ products }) {
   return (
     <div className='product-list-area'>
-      {rows}
+      {
+        products.map(product => <ProductCard key={product.id} product={product} />)
+      }
     </div>
   )
 }
+
+
+

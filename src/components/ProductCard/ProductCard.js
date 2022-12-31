@@ -4,7 +4,7 @@ import "./ProductCard.css"
 
 export default function ProductCard ({product}) {
   return (
-    <div key={product.id} className='product' title={product.title}>
+    <div className='product' title={product.title}>
       <picture className='product-img'>
         <img src="https://unsplash.it/250/200" alt="unsplash" />
       </picture>

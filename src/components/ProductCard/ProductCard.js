@@ -2,10 +2,7 @@ import React from 'react';
 import "./ProductCard.css";
 import { BsStar, BsStarHalf, BsStarFill } from "react-icons/bs";
 
-
-export default function ProductCard ({product}) {
-  let rating = product.rating.rate;
-
+function calculateRating (rating) {
   const result = []
   for (let i = 0; i < 5; i++) {
     if (rating >= 1){
@@ -13,7 +10,10 @@ export default function ProductCard ({product}) {
       rating -= 1
     }
     else if (rating > 0) {
-      if (rating >= 0.5){
+      if (rating + 0.25 >= 1){
+        result.push(<BsStarFill key={i} className="product-star fill"/>);
+      }
+      else if (rating + 0.25 >= 0.50) {
         result.push(<BsStarHalf key={i} className="product-star half"/>);
       }
       else {
@@ -25,7 +25,10 @@ export default function ProductCard ({product}) {
       result.push(<BsStar key={i} className="product-star empty"/>);
     }
   }
+  return result;
+}
 
+export default function ProductCard ({product}) {
   return (
     <div className='product' title={product.title}>
       <picture className='product-img'>
@@ -36,7 +39,7 @@ export default function ProductCard ({product}) {
         <h3 className='product-title' >{product.title}</h3>
         {/* <p className='product-description' title={product.description}>{product.description}</p> */}
         <div className='product-rating-area'>
-          <p>{result}</p>
+          <p>{calculateRating(product.rating.rate)}</p>
           <p className='product-rating'>{product.rating.rate}</p>
         </div>
 
@@ -49,25 +52,23 @@ export default function ProductCard ({product}) {
 
 
 
+
 // const result = []
-//   for (let i = 0; i < 5; i++) {
-//     if (rating >= 1){
-//       result.push(<BsStarFill key={i} className="product-star fill" />);
-//       rating -= 1
-//     }
-//     else if (rating > 0) {
-//       if (rating + 0.25 >= 1){
-//         result.push(<BsStarFill key={i} className="product-star fill"/>);
-//       }
-//       else if (rating + 0.25 >= 0.50) {
-//         result.push(<BsStarHalf key={i} className="product-star half"/>);
-//       }
-//       else {
-//         result.push(<BsStar key={i} className="product-star empty"/>);
-//       }
-//       rating -= rating
+// for (let i = 0; i < 5; i++) {
+//   if (rating >= 1){
+//     result.push(<BsStarFill key={i} className="product-star fill" />);
+//     rating -= 1
+//   }
+//   else if (rating > 0) {
+//     if (rating >= 0.5){
+//       result.push(<BsStarHalf key={i} className="product-star half"/>);
 //     }
 //     else {
 //       result.push(<BsStar key={i} className="product-star empty"/>);
 //     }
+//     rating -= rating
 //   }
+//   else {
+//     result.push(<BsStar key={i} className="product-star empty"/>);
+//   }
+// }

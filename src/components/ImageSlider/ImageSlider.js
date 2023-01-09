@@ -9,15 +9,15 @@ export default function ImageSlider() {
   const length = SliderImages.length;
 
   // automatically slide
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex(currentIndex == length - 1 ? 0 : currentIndex + 1);
-    }, 5000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentIndex(currentIndex == length - 1 ? 0 : currentIndex + 1);
+  //   }, 5000);
   
-    return () => {
-      clearInterval(interval);
-    }
-  }, [currentIndex, length]);
+  //   return () => {
+  //     clearInterval(interval);
+  //   }
+  // }, [currentIndex, length]);
   
 
   const prevImage = () => {

@@ -1,14 +1,14 @@
 
 .product-list-area {
-  /* border: 1px blue solid; */
+  border: 1px blue solid;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
   width: 100%;
 }
 
-@media only screen and (max-width:1439px) {
+/* @media only screen and (max-width:1439px) {
   .product-list-area {
     max-width: 916px;
   }
@@ -18,4 +18,4 @@
   .product-list-area {
     max-width: 736px;
   }
-}
+} */

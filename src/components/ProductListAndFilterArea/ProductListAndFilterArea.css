@@ -4,4 +4,17 @@
   width: 90%;
   margin: 20px auto 20px auto;
   justify-content: center;
+  border: 2px solid red;
 }
+
+/* @media only screen and (max-width:1439px) {
+  .product-list-area {
+    max-width: 916px;
+  }
+}
+
+@media only screen and (max-width:1199px) {
+  .product-list-area {
+    max-width: 736px;
+  }
+} */
